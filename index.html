@@ -123,6 +123,8 @@
               translateX: 250,
               translateZ: 200,
               scale: 2,
+              duration: 1000,
+              delay: (el, i) => { return i * 500 },
               loop: true
             });
             anime({
@@ -130,21 +132,25 @@
               translateX: 350,
               translateZ: 100,
               scale: 3,
+              duration: 2000,
+              delay: (el, i) => { return i * 500 },
               loop: true
             });
             anime({
               targets: '.circle3',
-              translateX: 800,
+              translateX: 500,
               translateZ: 100,
-           
+              duration: 900,
+              delay: (el, i) => { return i * 500 },
               scale: 5,
               loop: true
             });
             anime({
               targets: '.circle4',
-              translateX: 500,
+              translateX: 800,
               translateZ: 100,
-            
+              duration: 700,
+              delay: (el, i) => { return i * 500 },
               scale: 4,
               loop: true
             });
