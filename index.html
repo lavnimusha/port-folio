@@ -84,6 +84,17 @@
 .circle2, .circle4{
   background-color: grey;
 }
+#welcome-section{
+  width: 240px;
+  height: 240px;
+  background-color: 
+#ccc;
+  background-image: radial-gradient(#000 10%, transparent 11%),
+    radial-gradient(#e53935 10%, transparent 11%);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+  background-repeat: repeat;
+}
 </style>
    
 </head>
@@ -104,9 +115,9 @@
 
             <h1>Hi there! I'm Lavanya </h1>
             <h3>A Frontend Developer</h3>
-            <div class="shapes circle1"></div>
+           <!-- <div class="shapes circle1"></div>
             <div class="shapes circle2"></div>
-            <!-- <div class="shapes circle3"></div>
+             <div class="shapes circle3"></div>
             <div class="shapes circle4"></div> -->
         </section>
         <section id='projects'>
@@ -124,7 +135,7 @@
             }
             const circles = document.querySelectorAll('.shapes')
             const animation = anime({
-              targets: '.circle1',
+              targets: '#welcome-section',
               /* translateX: {
                 value:100,
                 duration: 1000,
@@ -138,10 +149,10 @@
                 value: 'yellow',
               },
               scale: {
-                value: 2,
+                value: 1.5,
                 duration: 1600,
                 delay: 800,
-                easing: 'easeInOutQuart'
+                easing: 'easeInOutElastic(1, .6)'
               },
               delay: 250,
               loop: true
