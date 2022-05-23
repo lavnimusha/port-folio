@@ -81,19 +81,20 @@
   top: 10vh;
   left: 10vw;
 }
-.circle2, .circle4{
-  background-color: grey;
+.circle2{
+  position: absolute;
+  top: 10vh;
+  right: 10vw;
 }
-#welcome-section{
-  width: 240px;
-  height: 240px;
-  background-color: 
-#ccc;
-  background-image: radial-gradient(#000 10%, transparent 11%),
-    radial-gradient(#e53935 10%, transparent 11%);
-  background-size: 60px 60px;
-  background-position: 0 0, 30px 30px;
-  background-repeat: repeat;
+.circle3{
+  position: absolute;
+  bottom: 10vh;
+  right: 10vw;
+}
+.circle4{
+  position: absolute;
+  bottom: 10vh;
+  left: 10vw;
 }
 </style>
    
@@ -115,10 +116,10 @@
 
             <h1>Hi there! I'm Lavanya </h1>
             <h3>A Frontend Developer</h3>
-           <!-- <div class="shapes circle1"></div>
+           <div class="shapes circle1"></div>
             <div class="shapes circle2"></div>
              <div class="shapes circle3"></div>
-            <div class="shapes circle4"></div> -->
+            <div class="shapes circle4"></div>
         </section>
         <section id='projects'>
 
@@ -135,19 +136,7 @@
             }
             const circles = document.querySelectorAll('.shapes')
             const animation = anime({
-              targets: '#welcome-section',
-              /* translateX: {
-                value:100,
-                duration: 1000,
-              }, */
-              rotate: {
-                value: 360,
-                duration: 1800,
-                easing: 'easeInOutSine'
-              },
-              backgroundColor: {
-                value: 'yellow',
-              },
+              targets: '.circle1',
               scale: {
                 value: 1.5,
                 duration: 1600,
@@ -159,31 +148,37 @@
             });
              anime({
               targets: '.circle2',
-              translateX: 350,
-              translateZ: 100,
-              scale: 3,
-              duration: 2000,
-              easing:'easeOutElastic(2, .5)',
+              scale: {
+                value: 1.5,
+                duration: 1600,
+                delay: 800,
+                easing: 'easeInOutElastic(1, .6)'
+              },
+              delay: 250,
               loop: true
             }); 
-            /* anime({
+            anime({
               targets: '.circle3',
-              translateX: 500,
-              translateZ: 100,
-              duration: 900,
-              delay: (el, i) => { return i * 500 },
-              scale: 5,
+              scale: {
+                value: 1.5,
+                duration: 1600,
+                delay: 800,
+                easing: 'easeInOutElastic(1, .6)'
+              },
+              delay: 250,
               loop: true
             });
             anime({
               targets: '.circle4',
-              translateX: 800,
-              translateZ: 100,
-              duration: 700,
-              delay: (el, i) => { return i * 500 },
-              scale: 4,
+              scale: {
+                value: 1.5,
+                duration: 1600,
+                delay: 800,
+                easing: 'easeInOutElastic(1, .6)'
+              },
+              delay: 250,
               loop: true
             });
- */    </script>
+   </script>
 </body>
 </html>
