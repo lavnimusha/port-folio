@@ -76,6 +76,9 @@
   border-radius: 50px;
   background-color: #aa0430;
 }
+.circle2, .circle4{
+  background-color: grey;
+}
 </style>
    
 </head>
@@ -96,10 +99,10 @@
 
             <h1>Hi there! I'm Lavanya </h1>
             <h3>A Frontend Developer</h3>
-            <div class="shapes"></div>
-            <div class="shapes"></div>
-            <div class="shapes"></div>
-            <div class="shapes"></div>
+            <div class="shapes circle1"></div>
+            <div class="shapes circle2"></div>
+            <div class="shapes circle3"></div>
+            <div class="shapes circle4"></div>
         </section>
         <section id='projects'>
 
@@ -115,9 +118,32 @@
             }
             }
             const circles = document.querySelectorAll('.shapes')
-            const animatiion = anime({
-              targets: circles,
+            const animation = anime({
+              targets: '.circle1',
               translateX: 250,
+              translateZ: 200,
+              scale: 2
+            });
+            anime({
+              targets: '.circle2',
+              translateX: 350,
+              translateZ: 100,
+              translateY: 250,
+              scale: 3
+            });
+            anime({
+              targets: '.circle3',
+              translateX: 800,
+              translateZ: 100,
+              translateY: 900,
+              scale: 5
+            });
+            anime({
+              targets: '.circle4',
+              translateX: 500,
+              translateZ: 100,
+              translateY: 500,
+              scale: 4
             });
     </script>
 </body>
