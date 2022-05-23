@@ -73,7 +73,7 @@
 .shapes{
   width: 100px;
   height: 100px;
-  /* border-radius: 50px; */
+  border-radius: 50px;
   background-color: #aa0430;
 }
 .circle2, .circle4{
@@ -120,13 +120,15 @@
             const circles = document.querySelectorAll('.shapes')
             const animation = anime({
               targets: '.circle1',
-              
+              translateX: {
+                value:100,
+                duration: 300,
+              },
               rotate: {
                 value: 360,
                 duration: 1800,
                 easing: 'easeInOutSine'
               },
-              borderRadius: ['0%', '50%'],
               backgroundColor: 'yellow',
               scale: {
                 value: 2,
@@ -137,7 +139,7 @@
               delay: 250,
               loop: true
             });
-            anime({
+            /* anime({
               targets: '.circle2',
               translateX: 350,
               translateZ: 100,
@@ -145,7 +147,7 @@
               duration: 2000,
               easing:'easeOutElastic(2, .5)',
               loop: true
-            });
+            }); */
             /* anime({
               targets: '.circle3',
               translateX: 500,
