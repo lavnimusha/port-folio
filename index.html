@@ -96,6 +96,11 @@
   bottom: 10vh;
   left: 10vw;
 }
+.heading{
+  position: absolute;
+  top: 25vh;
+  left: 50vw;
+}
 </style>
    
 </head>
@@ -113,13 +118,17 @@
             </a>
           </div>
         <section id='welcome-section'>
-
-            <h1>Hi there! I'm Lavanya </h1>
-            <h3>A Frontend Developer</h3>
-           <div class="shapes circle1"></div>
-            <div class="shapes circle2"></div>
-             <div class="shapes circle3"></div>
-            <div class="shapes circle4"></div>
+            <div class="headding">
+              <h1>Hi there! I'm Lavanya </h1>
+              <h3>A Frontend Developer</h3>  
+            </div>
+            <div class="semicircle">
+              <div class="shapes circle1"></div>
+              <!-- <div class="shapes circle2"></div>
+              <div class="shapes circle3"></div>
+              <div class="shapes circle4"></div> -->
+            </div>
+           
         </section>
         <section id='projects'>
 
@@ -137,27 +146,18 @@
             const circles = document.querySelectorAll('.shapes')
             const animation = anime({
               targets: '.circle1',
-              scale: {
-                value: 1.5,
-                duration: 1600,
-                delay: 800,
-                easing: 'easeInOutElastic(1, .6)'
-              },
-              delay: 250,
-              loop: true
-            });
-             anime({
-              targets: '.circle2',
-              scale: {
-                value: 1.5,
-                duration: 1600,
-                delay: 800,
-                easing: 'easeInOutElastic(1, .6)'
-              },
-              delay: 250,
-              loop: true
+              keyframes: [
+    {translateX: 20, translateY: -20},
+    {translateX: 40, translateY: -40},
+    {translateX: 60, translateY: -60},
+    {translateX: 80, translateY: -80},
+    {translateX: 100, translateY: -100}
+  ],
+              duration: 6000,
+              //delay: 250,
+    //          loop: true
             }); 
-            anime({
+            /* anime({
               targets: '.circle3',
               scale: {
                 value: 1.5,
@@ -178,7 +178,7 @@
               },
               delay: 250,
               loop: true
-            });
+            }); */
    </script>
 </body>
 </html>
