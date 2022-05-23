@@ -78,8 +78,8 @@
 }
 .circle1{
   position: absolute;
-  top: 10vh;
-  left: 10vw;
+  top: 20vh;
+  left: 30vw;
 }
 .circle2{
   position: absolute;
@@ -118,7 +118,7 @@
             </a>
           </div>
         <section id='welcome-section'>
-            <div class="headding">
+            <div class="heading">
               <h1>Hi there! I'm Lavanya </h1>
               <h3>A Frontend Developer</h3>  
             </div>
@@ -147,11 +147,13 @@
             const animation = anime({
               targets: '.circle1',
               keyframes: [
-    {translateX: 20, translateY: -20},
-    {translateX: 40, translateY: -40},
-    {translateX: 60, translateY: -60},
-    {translateX: 80, translateY: -80},
-    {translateX: 100, translateY: -100}
+    {translateX: -110, translateY: 0},
+    {translateX: -90, translateY: 20},
+    {translateX: -60, translateY: 40},
+    {translateX: -40, translateY: 80},
+    {translateX: -20, translateY: 100},
+    {translateX: 0, translateY: 120},
+    {translateX: 20, translateY: 100}
   ],
               duration: 6000,
               //delay: 250,
