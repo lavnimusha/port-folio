@@ -150,7 +150,7 @@
             const circles = document.querySelectorAll('.shapes')
             const animation = anime({
               targets: ['.circle1','.circle2','.circle3','.circle4'],
-              keyframes: [
+              /* keyframes: [
                 {translateX: -110, translateY: 0},
                 {translateX: -90, translateY: 20},
                 {translateX: -60, translateY: 40},
@@ -162,10 +162,15 @@
                 {translateX: 60, translateY: 40},
                 {translateX: 90, translateY: 20},
                 {translateX: 110, translateY: 0}, 
-                ],
-              duration: 6000,
-              delay: 250,
-            loop: true
+                ] */
+                scale: {
+                value: 1.5,
+                duration: 1600,
+                delay: 800,
+                easing: 'easeInOutElastic(1, .6)'
+                },
+                delay: anime.stagger(200),
+                loop: true
             }); 
             /* anime({
               targets: '.circle3',
